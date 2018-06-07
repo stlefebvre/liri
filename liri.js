@@ -48,8 +48,7 @@ function spotifyThisSong() {
         console.log(data.tracks.items[0].preview_url);
     });
 } else if (process.argv[3] !== undefined) {
-    var nodeArgs = process.argv;
-    var songInput = "";
+    var songInput = process.argv[3];
     spotify.search({
       type: 'track',
       query: songInput
